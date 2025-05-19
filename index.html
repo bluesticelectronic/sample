@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <h1>THUNES INVESTMENT</h1>
   <title>Login</title>
   <style>
     /* Your existing styles */
@@ -67,6 +66,8 @@
 </head>
 <body>
 
+<h1 style="margin-bottom: 20px;">THUNES INVESTMENT</h1>
+
 <div class="container">
   <form id="loginForm">
     <div class="header">LOGIN</div>
@@ -106,8 +107,8 @@
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        alert("Login successful!");
-        window.location.href = "dashboard.html";
+        // Redirect directly to the provided GitHub link after successful login
+        window.location.href = "https://bluesticelectronic.github.io/dashboard/";
       })
       .catch((error) => {
         document.getElementById("error").innerText = error.message;
@@ -126,8 +127,7 @@
 
     signInWithEmailAndPassword(auth, autoEmail, autoPassword)
       .then((userCredential) => {
-        alert("Signed in automatically after registration!");
-        window.location.href = "dashboard.html"; // Redirect to dashboard
+        window.location.href = "https://bluesticelectronic.github.io/dashboard/"; // Redirect to dashboard
       })
       .catch((error) => {
         document.getElementById("error").innerText = error.message;
